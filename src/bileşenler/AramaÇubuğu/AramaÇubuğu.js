@@ -6,6 +6,7 @@ import { faHeart, faCircle, faCompass } from '@fortawesome/free-regular-svg-icon
 import "./AramaÇubuğu.css";
 
 const AramaÇubuğu = (props) => {
+  const {searchVal, setSearchVal} = props;
   return (
     <div className="search-bar-wrapper">
       <div className="social">
@@ -15,6 +16,8 @@ const AramaÇubuğu = (props) => {
         <input
           type="text"
           placeholder="Arama"
+          value={searchVal}
+          onChange={evt => setSearchVal(evt.target.value)}
         />
       </form>
       <div className="social-wrapper">
